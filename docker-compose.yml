@@ -33,7 +33,7 @@ services:
       - webproxy
 
   keycloak:
-    image: jboss/keycloak:14.0.0
+    image: jboss/keycloak:16.1.1
     container_name: keycloak
     restart: always
     environment:
