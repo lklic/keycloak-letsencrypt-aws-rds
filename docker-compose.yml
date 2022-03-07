@@ -52,6 +52,11 @@ services:
       PROXY_ADDRESS_FORWARDING: ${PROXY_ADDRESS_FORWARDING}
       LETSENCRYPT_HOST: ${LETSENCRYPT_HOST}
       LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
+      
+    volumes:
+      - /home/{user}/theme/{theme1}:/opt/jboss/keycloak/themes/artresearch
+      - /home/{user}/theme/{theme2}:/opt/jboss/keycloak/themes/researchspace
+      - /home/{user}/keycloak-letsencrypt-aws-rds/disable-theme-cache.cli:/opt/jboss/startup-scripts/disable-theme-cache.cli
 
     networks:
       - webproxy
