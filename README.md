@@ -1,4 +1,4 @@
-# Keycloak Docker setup with NGINX Proxy and Letsencrypt hosted on AWS EC2 with managed Postgres DB on AWS RDS
+# Keycloak Docker setup with NGINX Proxy, Letsencrypt, hosted on AWS EC2 with managed Postgres DB on AWS RDS, and config for federation to windows active directory
 
 A simple Keycloak setup using NGINX Reverse Proxy and Letsencrypt with a database hosted on AWS RDS
 
