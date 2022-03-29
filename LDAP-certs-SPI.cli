@@ -1,0 +1,8 @@
+embed-server --std-out=echo --server-config=standalone-ha.xml
+/subsystem=keycloak-server/spi=truststore/:add
+/subsystem=keycloak-server/spi=truststore/provider=file/:add(enabled=true)
+/subsystem=keycloak-server/spi=truststore/provider=file/:map-put(name=properties,key=file,value=/opt/jboss/keycloak/certs/truststore.jks)
+/subsystem=keycloak-server/spi=truststore/provider=file/:map-put(name=properties,key=password,value=changeit)
+/subsystem=keycloak-server/spi=truststore/provider=file/:map-put(name=properties,key=hostname-verification-policy,value=ANY)
+/subsystem=keycloak-server/spi=truststore/provider=file/:map-put(name=properties,key=enabled,value=true)
+stop-embedded-server
